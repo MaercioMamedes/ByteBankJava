@@ -7,6 +7,7 @@ public class Main {
         Menu menu = new Menu();
         Account account = new Account(111,client.getId(),"conta corrente", 0);
         Scanner scanner = new Scanner(System.in);
+        double deposit;
         int option_selected;
 
 
@@ -28,7 +29,11 @@ public class Main {
                     break;
 
                 case 4:
-                    System.out.println("DEPOSITAR");
+                    System.out.print("digite a quantia para depósito: ");
+                    deposit = scanner.nextDouble();
+                    account.toDeposit(deposit);
+                    System.out.println("Depósito realizado com sucesso");
+                    System.out.printf("Seu saldo agora é R$ %.2f \n", account.getBalance());
                     break;
 
                 case 0:
