@@ -8,6 +8,7 @@ public class Main {
         Account account = new Account(111,client.getId(),"conta corrente", 0);
         Scanner scanner = new Scanner(System.in);
         double deposit;
+        double withDraw;
         int option_selected;
 
 
@@ -21,7 +22,10 @@ public class Main {
                     System.out.printf("Seu saldo é %.2f", account.getBalance());
                     break;
                 case 2:
-                    System.out.println("dfsdf");
+                    System.out.print("DIGITE UMA QUANTIA PARA SACAR");
+                    withDraw = scanner.nextDouble();
+                    account.toWithdraw(withDraw);
+                    System.out.printf("Seu saldo agora é R$ %.2f \n", account.getBalance());
                     break;
 
                 case 3:

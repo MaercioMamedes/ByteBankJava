@@ -31,7 +31,10 @@ public class Account {
         this.type = type;
     }
 
-    public double toDeposit(double value){
-        return this.balance += value;
+    public void toDeposit(double value){
+        this.balance += value;
     }
+
+    public void toWithdraw(double value) {this.balance -= value; }
+
 }
